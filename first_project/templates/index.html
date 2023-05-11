@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>First App</title>
+</head>
+<body>
+    <h3>Programs offered</h3>
+ 
+    <table border="1">
+        <tr>
+            <th>Title</th>
+            <th>Branch</th>
+        </tr>
+      {% for r in program_rows %}
+       
+        <tr>
+          <td>{{ r.title }}</td>
+          <td>{{ r.branch }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <h3>Student Table</h3>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Year</th>
+            <th>Date of Birth</th>
+          </tr>
+        {% for r in student_rows %}
+        
+          <tr>
+            <td>{{ r.name }}</td>
+            <td>{{ r.roll_number }}</td>
+            <td>{{ r.year }}</td>
+            <td>{{ r.dob }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>
