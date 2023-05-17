@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title%} 
+PREDICTOR
+{% endblock %}
+
+{% block content%} 
+<style>
+    h4 {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 30px;
+    }
+    form {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+    }
+    label {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style> 
+<div class="container">
+    <h4>Enter the required information to detect the presence of Liver disease.</h4>
+    <div class="form-container">
+        <form action="{% url 'result' %}">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="Age">Age:</label>
+            <input type="text" id="Age" name="Age" required>
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="">Select</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+            <label for="Total_Bilirubin">Total Bilirubin:</label>
+            <input type="text" id="Total_Bilirubin" name="Total_Bilirubin" required>
+            <label for="Direct_Bilirubin">Direct Bilirubin:</label>
+            <input type="text" id="Direct_Bilirubin" name="Direct_Bilirubin" required>
+            <label for="Alkaline_Phosphotase">Alkaline Phosphotase:</label>
+            <input type="text" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required>
+            <label for="Alamine_Aminotransferase">Alamine Aminotransferase:</label>
+            <input type="text" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required>
+            <label for="Aspartate_Aminotransferase">Aspartate Aminotransferase:</label>
+            <input type="text" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required>
+            <label for="Total_Protiens">Total Proteins:</label>
+            <input type="text" id="Total_Protiens" name="Total_Protiens" required>
+            <label for="Albumin">Albumin:</label>
+            <input type="text" id="Albumin" name="Albumin" required>
+            <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio:</label>
+            <input type="text" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required>
+            <br><br>
+            <input type="submit" value="Predict">
+            <br><br>
+            <br><br>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title%} 
+result
+{% endblock %}
+
+{% block content%} 
+<style>
+
+
+    .container_P {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+    .result {
+        margin-top: 40px;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .result h2 {
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    .result h4 {
+        margin-bottom: 5px;
+    }
+
+    .recommendation {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .back-btn {
+        margin-top: 20px;
+    }
+</style>
+<div class="container_P">
+    <div class="result">
+        <h2><strong>RESULT </strong></h2>
+        <h4 class="recommendation"><strong>{{result_message}}</strong></h4>
+    </div>
+    <a href="{% url 'home'%}" class="back-btn">&larr; Go Back</a>
+</div>
+{% endblock %}

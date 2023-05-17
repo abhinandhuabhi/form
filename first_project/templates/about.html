@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}About - Liver Disease Predictor{% endblock %}
+
+{% block content %}
+<style>
+
+    p,h3 {
+            line-height: 1.5;
+            text-align: center; 
+            font-weight: bold;
+        }
+</style>
+  <div class="container mt-5">
+    <h3>Welcome to our Liver Disease Detector</h3>
+    <p>
+      The Liver Disease Detector is an advanced system designed to predict the likelihood of a person being affected by liver disease <br>based on various medical parameters and indicators. The system utilizes a machine learning model trained on a dataset of liver disease cases.
+    </p>
+
+    <p>
+      The detector takes into account several factors such as age, gender, total bilirubin levels, direct bilirubin levels, alkaline <br>phosphotase levels, alanine aminotransferase levels, aspartate aminotransferase levels, total proteins, albumin levels, and the albumin and globulin ratio. These parameters are inputted into the predictor, and the system then processes the data using its trained model to provide a prediction.
+    </p>
+
+    <p>
+      The accuracy of the liver disease detector has been evaluated using a comprehensive dataset and rigorous testing. However, <br>it is important to note that the predictor's accuracy may vary depending on the quality and completeness of the input data, as well as other individual factors.
+    </p>
+
+    <p>
+      The Liver Disease Detector is intended for informational purposes only and should not be used as a substitute for professional <br>medical advice or diagnosis. Always consult with a qualified healthcare provider for a proper medical evaluation and diagnosis.
+    </p>
+
+    <p>
+      If you have any questions, feedback, or concerns regarding the Liver Disease Detector, please feel free to reach out to our team. <br>We value your input and strive to continually improve our system.
+    </p>
+  </div>
+{% endblock %}
